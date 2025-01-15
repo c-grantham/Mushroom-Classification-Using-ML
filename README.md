@@ -1,4 +1,5 @@
-**Introduction**
+<h1>Introduction</h1>
+
 The problem I am addressing with this project is classifying between edible and
 poisonous mushrooms. Accurately and efficiently identifying potentially toxic mushrooms is
 very important, as ingesting some poisonous species can be fatal within days if untreated.
@@ -6,14 +7,14 @@ Additionally, many highly toxic fungi closely resemble edible species, increasin
 adept classification. To address this problem, I generated a machine learning model that can
 differentiate between edible and poisonous mushrooms trained on a publicly available dataset.
 
-**Dataset Overview**
+<h2>Dataset Overview</h2>
 The dataset in question is the “Mushroom Classification” dataset, sourced from the UCI
 Machine Learning Repository. It contains 8,124 hypothetical mushroom samples with 21
 features, including edibility, odor, population, habitat, and characteristics of the cap, stalk, and
 gills. These features provide a diverse range of examinable traits that help to distinguish between
 different species of mushrooms, making this dataset ideal for machine learning modeling.
 
-**Social Impacts**
+<h3>Social Impacts</h3>
 The dataset’s comprehensive collection of physical and environmental information about
 mushrooms has significant real-world implications, particularly in regards to public safety and
 culinary usage. As previously mentioned, identifying poisonous and edible mushrooms
@@ -30,7 +31,7 @@ provide crucial information for first responders in mushroom consumption related
 This dataset has broad societal impacts that has the potential to increase public safety, strengthen
 knowledge about mushrooms, and reduce cases of misidentified toxic mushrooms.
 
-**Motivations**
+<h4>Motivations</h4>
 From a personal perspective, this dataset has crucial information for those who forage for
 mushrooms, whether for culinary usage or as a hobby. These individuals often rely solely on
 visual characteristics they perceive to distinguish between safe and unsafe mushrooms. The
@@ -51,7 +52,7 @@ from the pandas library. Next, I separated the data into the “X” (independen
 the mushrooms as either poisonous (p) or edible (e). This variable is the dependent variable
 because it is the variable that I am trying to predict, it is also referred to as the target variable.
 
-**Data Preparation**
+<h5>Data Preparation</h5>
 Before any other data preprocessing is done, the missing values within the dataset need to be
 filled in. I used the SimpleImputer with the “most_frequent” strategy, which fills in the empty
 data points with the most frequently occurring value in that column. Once that is complete, the
@@ -73,7 +74,7 @@ passing the StandardScaler with “with_mean=False” to avoid attempting to cen
 matrix of data. Supplementing the scaler with this code snippet remedied the issue. These are all
 of the steps I took to prepare the mushroom dataset for modeling.
 
-**Model Selection**
+<h6>Model Selection</h6>
 When first considering what model would be best to use, I investigated what uses the
 potential models were best suited for. Knowing that my dataset is high-dimensional and complex
 I assumed a linear model would likely not perform well, but I still wanted to give one a try just
@@ -87,7 +88,7 @@ specifically with the Radial Basis Function (RBF) kernel since they are capable 
 non-linear classes. Finally, I wanted to consider a neural network as well on account of their
 ability to identify complex non-linear relationships.
 
-**Chosen Model**
+<h7>Chosen Model</h7>
 Ultimately, I chose to use Random Forests to model the mushroom dataset because it
 offers an advantage that addresses a key challenge associated with handling high-dimensional
 data and complex relationships amongst classes—overfitting. Random Forest uses ensemble
@@ -95,7 +96,7 @@ learning techniques that build multiple decision trees with different subsets of
 their predictions to make classifications. This method not only reduces critical overfitting risks of
 only a single decision tree but also increases the robustness of the model.
 
-**Model Optimization**
+<h8>Model Optimization</h8>
 After a few initial builds of the model, I recorded extremely high accuracy of 99.9%. The
 confusion matrix reported only one false positive and one false negative. I immediately assumed
 that overfitting had occurred, and researched what I could do to prevent and identify overfitting
@@ -118,7 +119,7 @@ that the overfitting issue had been resolved. Overall, the classification of mus
 extremely accurate with 41 false positives and false negatives in comparison to 12,173 true
 positives and true negatives.
 
-Citations
+<h9>Citations</h9>
 
 [1] “7 of the World’s Most Poisonous Mushrooms | Britannica,” www.britannica.com.
 https://www.britannica.com/story/7-of-the-worlds-most-poisonous-mushrooms
